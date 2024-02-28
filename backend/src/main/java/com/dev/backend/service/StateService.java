@@ -30,7 +30,7 @@ public class StateService {
     public State updateState(State state, Long id) throws NotFoundException {
         try {
             state.setId(id);
-    
+
             @SuppressWarnings("null")
             Optional<State> optionalState = stateRepository.findById(id);
             if (optionalState.isPresent()) {
