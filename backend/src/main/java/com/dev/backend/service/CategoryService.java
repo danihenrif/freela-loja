@@ -37,7 +37,7 @@ public class CategoryService {
                 Category existingCategory = optionalCategory.get();
                 Date recoveryCreationDate = existingCategory.getCreationDate();
                 category.setCreationDate(recoveryCreationDate);
-                category.setUpdatedDate(new Date());
+                category.setUpdateDate(new Date());
                 return categoryRepository.saveAndFlush(category);
             } else {
                 throw new RuntimeException("Category not found with id: " + id);

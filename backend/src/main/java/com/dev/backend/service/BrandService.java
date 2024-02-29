@@ -37,7 +37,7 @@ public class BrandService {
                 Brand existingBrand = optionalBrand.get();
                 Date recoveryCreationDate = existingBrand.getCreationDate();
                 brand.setCreationDate(recoveryCreationDate);
-                brand.setUpdatedDate(new Date());
+                brand.setUpdateDate(new Date());
                 return brandRepository.saveAndFlush(brand);
             } else {
                 throw new RuntimeException("Brand not found with id: " + id);

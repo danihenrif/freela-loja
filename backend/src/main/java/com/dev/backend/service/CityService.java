@@ -37,7 +37,7 @@ public class CityService {
                 City existingCity = optionalCity.get();
                 Date recoveryCreationDate = existingCity.getCreationDate();
                 city.setCreationDate(recoveryCreationDate);
-                city.setUpdatedDate(new Date());
+                city.setUpdateDate(new Date());
                 return cityRepository.saveAndFlush(city);
             } else {
                 throw new RuntimeException("City not found with id: " + id);

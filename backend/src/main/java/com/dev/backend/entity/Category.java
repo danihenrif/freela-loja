@@ -22,5 +22,5 @@ public class Category {
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
     @Temporal(TemporalType.TIMESTAMP)
-    private Date updatedDate;
+    private Date updateDate;
 }
