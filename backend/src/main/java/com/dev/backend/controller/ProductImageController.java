@@ -29,7 +29,12 @@ public class ProductImageController {
         return productImageService.getAll();
     }
 
-    @PostMapping("/")
+    @GetMapping("/productImage/{id}")
+    public List<ProductImage> getAll(@PathVariable Long id) {
+        return productImageService.getImageByProduct(id);
+    }
+
+    @PostMapping("/{id}")
     public ProductImage addProductImage(@PathVariable Long id, @RequestParam MultipartFile file) {
         return productImageService.addProductImage(id, file);
     }

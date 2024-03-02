@@ -27,6 +27,7 @@ public class Person {
     private String cpf;
     private String email;
     private String password;
+    private String adress;
     
     @ManyToOne
     @JoinColumn(name = "idCity")

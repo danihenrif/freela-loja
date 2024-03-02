@@ -31,5 +31,5 @@ public class ProductImage {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updateDate;
     @Transient
-    private byte[] arq; 
+    private byte[] archive; 
 }
